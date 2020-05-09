@@ -40,6 +40,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
 - [Usage](#usage)
+  - [aadoc "input_folder_path_in_quotes" "optional output path"](#aadoc-%22inputfolderpathinquotes%22-%22optional-output-path%22)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -89,6 +90,8 @@ pip install aadoc
 <!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_ -->
+
+### aadoc "input_folder_path_in_quotes" "optional output path"
 
 
 
