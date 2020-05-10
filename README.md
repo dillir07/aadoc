@@ -127,7 +127,7 @@ Distributed under the GPLv3 License. See `LICENSE` for more information.
 
 Dilli Babu R - [@dillir07](https://twitter.com/dillir07) - dillir07@outlook.com
 
-Project Link: [https://github.com/dillir07/aadoc](https://github.com/dillir07/aadoc)
+Project Link: [https://dillir07.github.io/aadoc/](https://dillir07.github.io/aadoc/)
 
 
 
