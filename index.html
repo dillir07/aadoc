@@ -3,16 +3,19 @@
 <title>AADoc</title>
 <meta charset="UTF-8">
 <meta name="author" content="Dilli Babu R">
-<meta name="description" content="AADoc is an easy to use tool that can generate Documentation automatically using Automation Anywhere code">
+<meta name="description"
+    content="AADoc is an easy to use tool that can generate Documentation automatically using Automation Anywhere code">
 <meta property="og:image" content="https://dev-to-uploads.s3.amazonaws.com/i/3evjyabnoghtiojrchcy.PNG">
-<meta property="og:description" content="AADoc is an easy to use tool that can generate Documentation automatically using Automation Anywhere code">
+<meta property="og:description"
+    content="AADoc is an easy to use tool that can generate Documentation automatically using Automation Anywhere code">
 <meta name="theme-color" content="#2196f3">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="https://dev-to-uploads.s3.amazonaws.com/i/3evjyabnoghtiojrchcy.PNG" type="image/x-icon">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
     body {
-        color: #333;
+        color: #ddd;
+        background-color: #1c1e1f;
         /* font-size: large;
     margin-top: 25px;
     margin-left: 40px !important; */
@@ -298,7 +301,8 @@
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
     <div id="navbar" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
         <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="toggleView(this)">About</a>
-        <a href="#documentation" class="w3-bar-item w3-button w3-padding-large" onclick="toggleView(this)">Documentation</a>
+        <a href="#documentation" class="w3-bar-item w3-button w3-padding-large"
+            onclick="toggleView(this)">Documentation</a>
         <a href="#example" class="w3-bar-item w3-button w3-padding-large" onclick="toggleView(this)">Example</a>
         <div class="w3-dropdown-hover">
             <button class="w3-padding-large w3-button" title="More">Contact<i class="fa fa-caret-down"></i></button>
@@ -446,8 +450,15 @@
             </div>
         </div>
 
-        <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="example">
-            <h2 class="w3-wide w3-center">Sample Home Page</h2>
+        <br>
+
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px;"
+            id="example">
+            
+            <!-- index page starts here -->
+
+            <div style="background-color:white; color: #333;" class="w3-content w3-padding">
+                <h2 class="w3-wide w3-center">Sample Home Page</h2>
 
             <div><span class="header">Project - Documentation</span></div>
             <table>
@@ -457,7 +468,7 @@
                 </tr>
             </table>
             <div><span class="file">Files:</span></div>
-            <div><span class="file-link"><a href="#" target="_blank" rel="noreferrer">Write Data to Database</a></span>
+            <div><span class="file-link"><a href="#sampleFile" rel="noreferrer">Write Data to Database</a></span>
             </div><br>
             <div>
                 <table>
@@ -485,10 +496,44 @@
                 </table>
             </div>
 
-            <!-- index page ends here -->
+            <br>
 
-            <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-                <h2 class="w3-wide w3-center">Sample File Documentation</h2>
+            <div><span class="file-link"><a href="#sampleFile" rel="noreferrer">Connect to WebService</a></span>
+            </div><br>
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="label">File Path:</span></th>
+                        <td><span><a href="#" target="_blank" rel="noreferrer">C:\temp\aa_doc\Input\Connect to Webservice.txt</a></span></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="label">No of Comment lines:</span></th>
+                        <td><span>36</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="label">Total Number of lines:</span></th>
+                        <td><span>108</span></td>
+                    </tr>
+                </table>
+            </div>
+
+            <br>
+            </div>
+
+            <!-- index page ends here -->
+            <!-- doc starts here -->
+
+            <div id="sampleFile" class=" w3-content w3-padding-64" style="max-width:800px">
+                <div style="background-color:white; color: #333;" class="w3-container w3-content w3-padding">
+                    <h2 class="w3-wide w3-center">Sample File Documentation</h2>
 
                 <div>
                     <div><span class="file">Write Data to Database</span></div>
@@ -626,9 +671,12 @@
                             an
                             effective documentation</span></div>
                 </div>
+                </div>
             </div>
 
-            <div class="w3-container w3-content w3-padding-64 w3-card-4 w3-round-large"
+
+
+            <div class="w3-container w3-content w3-padding w3-card-4 w3-round-large"
                 style="max-width:800px; background-color: #333; color: #ddd;" id="notes">
                 <h2 class="w3-wide w3-center">Thank you</h2>
                 <p>Please feel free to let me know if you like to see some feature added or if you face any issues.</p>
@@ -637,7 +685,6 @@
                         here to learn more.</a></p>
             </div>
 
-            <!-- End Page Content -->
         </div>
 
         <script>
@@ -645,12 +692,12 @@
             function toggleView(element) {
 
 
-                if (element.href){
-                    if(element.href.includes("about")){
+                if (element.href) {
+                    if (element.href.includes("about")) {
                         document.querySelector('meta[name="theme-color"]').setAttribute("content", "#2196f3");
-                    } else if(element.href.includes("documentation")){
+                    } else if (element.href.includes("documentation")) {
                         document.querySelector('meta[name="theme-color"]').setAttribute("content", "#333");
-                    } else if(element.href.includes("example")){
+                    } else if (element.href.includes("example")) {
                         document.querySelector('meta[name="theme-color"]').setAttribute("content", "#fff");
                     }
                 }
