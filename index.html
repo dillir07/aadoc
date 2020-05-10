@@ -266,11 +266,11 @@
 
 <body>
 
-    <!-- Navbar -->
+    <!-- Navbar inspired by w3schools demo site and uses w3css -->
     <div class="w3-top">
         <div class="w3-bar w3-blue w3-card">
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">Menu</a>
+                href="javascript:void(0)" onclick="toggleView(this)" title="Toggle Navigation Menu">Menu</a>
             <a href="https://dillir07.github.io/aadoc/" style="text-decoration: none;"
                 class="w3-bar-item w3-padding-large"><span id="doc"><span id="aa">AA</span>Doc</span></a>
             <a href="#about" class="w3-bar-item w3-padding-large w3-hide-small">About</a>
@@ -291,10 +291,10 @@
     </div>
 
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-    <div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
-        <a href="#documentation" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Documentation</a>
-        <a href="#example" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Example</a>
+    <div id="navbar" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="toggleView(this)">About</a>
+        <a href="#documentation" class="w3-bar-item w3-button w3-padding-large" onclick="toggleView(this)">Documentation</a>
+        <a href="#example" class="w3-bar-item w3-button w3-padding-large" onclick="toggleView(this)">Example</a>
         <div class="w3-dropdown-hover">
             <button class="w3-padding-large w3-button" title="More">Contact<i class="fa fa-caret-down"></i></button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -313,32 +313,34 @@
         <!-- The about Section -->
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
             <h2 class="w3-wide"><span id="doc"><span id="aa">AA</span>Doc</span></h2>
-            <p class="w3-opacity"><i>A simple, free and easy to use documentation tool for Automation Anywhere RPA Tool</i></p>
+            <p class="w3-opacity"><i>A simple, free and easy to use documentation tool for Automation Anywhere RPA
+                    Tool</i></p>
             <div class="w3-row">
                 <div class="w3-panel w3-padding example w3-round-large">
-                    <h2><a href="https://pypi.org/project/aadoc/" target="_blank">Installation</a></h2>
+                    <h3><a href="https://pypi.org/project/aadoc/" target="_blank">Installation</a></h3>
                     <code>pip install aadoc</code>
                 </div>
                 <div class="w3-panel w3-padding example w3-round-large">
-                    <h2>Prepare input files</h2>
+                    <h3>Prepare input files</h3>
                     <p>In AA, Task Editor, Go to File Menu and Select Save as Text File</p>
                     <a href="https://apeople.automationanywhere.com/s/question/0D56F00007Zxdp8SAB/is-there-any-way-to-convert-atmx-file-to-txt-?language=en_US"
                         target="_blank">Learn how to export code in text format</a>
                 </div>
                 <div class="w3-panel w3-padding example w3-round-large">
-                    <h2>Step 3: Generating Documnetation</h2>
+                    <h3>Generating Documnetation</h3>
                     <div>
-                        <code>aadoc "folder path where inputs are present" "distination folder path for documentation"</code>
+                        <code>C:\&gt;aadoc "folder path where inputs are present" "distination folder path for documentation"</code>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- The documentation Section -->
-        <div style="background-color: #2196f3; color: #fff;" id="documentation" class="w3-padding-64">
+        <div style="background-color: #2196f3; color: #fff;" id="documentation" class="w3-padding-64 w3-round">
             <div class="w3-container w3-content">
                 <h2 class="w3-wide w3-center">Documentation</h2>
-                <p class="w3-opacity w3-center"><i>You can the sequence as you wish, documentation will be generated
+                <p class="w3-opacity w3-center"><i>You can change the sequence as you wish, documentation will be
+                        generated
                         accordingly</i></p><br>
 
                 <div class="w3-row">
@@ -347,14 +349,14 @@
                         <div class="w3-container example w3-card-4 w3-round">
                             <p><b>@author</b></p>
                             <p class="w3-opacity">For documenting Author / Developer information</p>
-                            <p>@author Titanic &lt;dillir07@outlook.com&gt</p>
+                            <p>@author Dilli Babu R &lt;dillir07@outlook.com&gt</p>
                         </div>
                     </div>
 
                     <div class="w3-margin-bottom">
                         <div class="w3-container example w3-card-4 w3-round">
                             <p><b>@date</b></p>
-                            <p class="w3-opacity">@date For documenting created date or modified date/p>
+                            <p class="w3-opacity">For documenting created date or modified date</p>
                             <p>@date 25-July-2020</p>
                         </div>
                     </div>
@@ -443,15 +445,21 @@
             <h2 class="w3-wide w3-center">Sample Home Page</h2>
 
             <div><span class="header">Project - Documentation</span></div>
-            <div><span class="label">Created on: </span><span>May 09, 2020</span></div>
+            <table>
+                <tr>
+                    <th><span class="label">Created On:</span></th>
+                    <td><span>08-Mar-2020</span></td>
+                </tr>
+            </table>
             <div><span class="file">Files:</span></div>
-            <div><span class="file-link"><a href="#" target="_blank" rel="noreferrer">Write Data to Database</a></span></div><br>
+            <div><span class="file-link"><a href="#" target="_blank" rel="noreferrer">Write Data to Database</a></span>
+            </div><br>
             <div>
                 <table>
                     <tr>
                         <th><span class="label">File Path:</span></th>
-                        <td><span><a href="#" target="_blank"
-                                    rel="noreferrer">C:\temp\aa_doc\Input\Write Data to Database.txt</a></span></td>
+                        <td><span><a href="#" target="_blank" rel="noreferrer">C:\temp\aa_doc\Input\Write Data to
+                                    Database.txt</a></span></td>
                     </tr>
                 </table>
             </div>
@@ -477,162 +485,179 @@
             <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
                 <h2 class="w3-wide w3-center">Sample File Documentation</h2>
 
-            <div>
-                <div><span class="file">Write Data to Database</span></div>
                 <div>
-                    <table>
-                        <tr>
-                            <th><span class="label">Date:</span></th>
-                            <td><span>15-JAN-2018</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div><span class="description">This file contains code that chooses connection to database, then
-                        verifies the connections, reads the connection params and finally closes the connection.</span>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="label">Author:</span></th>
-                            <td><span><a class="author" href="mailto:dillir07@outlook.com">Dilli Babu R</a></span>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table>
-                        <tr class="copyright">
-                            <th><span class="label">Copyright:</span></th>
-                            <td><span>Dilli Babu R</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="label">Version:</span></th>
-                            <td><span>2.5</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table>
-                        <tr class="license">
-                            <th><span class="label">License:</span></th>
-                            <td><span>Apache v2.0</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div><span class="description">Document Histroy</span></div>
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="label">Since:</span></th>
-                            <td><span>1.0 - Support for mouse events added</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="label">Since:</span></th>
-                            <td><span>2.0 - Added drag and drop Support</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div><span class="property-title">Parameters</span></div>
-                <div>
-                    <table class="param-table">
-                        <tr class="param-header-row">
-                            <th class="param-table-cell">Name</th>
-                            <th class="param-table-cell">Type</th>
-                            <th class="param-table-cell">Description</th>
-                        </tr>
-                        <tr>
-                            <td class="param-table-cell"><span>vConnectionName</span></td>
-                            <td class="param-table-cell"><span>Text</span></td>
-                            <td class="param-table-cell"><span>Name of the connection</span></td>
-                        </tr>
-                        <tr>
-                            <td class="param-table-cell"><span>vConnectionType</span></td>
-                            <td class="param-table-cell"><span>Text</span></td>
-                            <td class="param-table-cell"><span>Type of the connection</span></td>
-                        </tr>
-                        <tr>
-                            <td class="param-table-cell"><span>vConfigUrl</span></td>
-                            <td class="param-table-cell"><span>Text</span></td>
-                            <td class="param-table-cell"><span>URL of the connection</span></td>
-                        </tr>
-                        <tr>
-                            <td class="param-table-cell"><span>vCredentialsName</span></td>
-                            <td class="param-table-cell"><span>Text</span></td>
-                            <td class="param-table-cell"><span>Name of the Credentials in CW</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div><span class="function">Select connection to Database</span></div>
-                <div><span class="description">Selects the connection to the database by going over all the available
-                        connections.</span></div>
-                <div><span class="property-title">Parameters</span></div>
-                <div>
-                    <table class="param-table">
-                        <tr class="param-header-row">
-                            <th class="param-table-cell">Name</th>
-                            <th class="param-table-cell">Type</th>
-                            <th class="param-table-cell">Description</th>
-                        </tr>
-                        <tr>
-                            <td class="param-table-cell"><span>vConnectionName</span></td>
-                            <td class="param-table-cell"><span>Text</span></td>
-                            <td class="param-table-cell"><span>Name of the connection</span></td>
-                        </tr>
-                        <tr>
-                            <td class="param-table-cell"><span>vConnectionType</span></td>
-                            <td class="param-table-cell"><span>Text</span></td>
-                            <td class="param-table-cell"><span>Type of the connection</span></td>
-                        </tr>
-                        <tr>
-                            <td class="param-table-cell"><span>vConfigUrl</span></td>
-                            <td class="param-table-cell"><span>Text</span></td>
-                            <td class="param-table-cell"><span>URL of the connection</span></td>
-                        </tr>
-                        <tr>
-                            <td class="param-table-cell"><span>vCredentialsName</span></td>
-                            <td class="param-table-cell"><span>Text</span></td>
-                            <td class="param-table-cell"><span>Name of the Credentials in CW</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div><span class="function">DB Connection check</span></div>
-                <div><span class="description">Verifies the connection if it is connected correctly or not, and Nisi
-                        aliqua mollit sint labore pariatur occaecat amet.</span></div>
+                    <div><span class="file">Write Data to Database</span></div>
+                    <div>
+                        <table>
+                            <tr>
+                                <th><span class="label">Date:</span></th>
+                                <td><span>15-JAN-2018</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div><span class="description">This file contains code that chooses connection to database, then
+                            verifies the connections, reads the connection params and finally closes the
+                            connection.</span>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <th><span class="label">Author:</span></th>
+                                <td><span><a class="author" href="mailto:dillir07@outlook.com">Dilli Babu R</a></span>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <tr class="copyright">
+                                <th><span class="label">Copyright:</span></th>
+                                <td><span>Dilli Babu R</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <th><span class="label">Version:</span></th>
+                                <td><span>2.5</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <tr class="license">
+                                <th><span class="label">License:</span></th>
+                                <td><span>Apache v2.0</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div><span class="description">Document Histroy</span></div>
+                    <div>
+                        <table>
+                            <tr>
+                                <th><span class="label">Since:</span></th>
+                                <td><span>1.0 - Support for mouse events added</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <th><span class="label">Since:</span></th>
+                                <td><span>2.0 - Added drag and drop Support</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div><span class="property-title">Parameters</span></div>
+                    <div>
+                        <table class="param-table">
+                            <tr class="param-header-row">
+                                <th class="param-table-cell">Name</th>
+                                <th class="param-table-cell">Type</th>
+                                <th class="param-table-cell">Description</th>
+                            </tr>
+                            <tr>
+                                <td class="param-table-cell"><span>vConnectionName</span></td>
+                                <td class="param-table-cell"><span>Text</span></td>
+                                <td class="param-table-cell"><span>Name of the connection</span></td>
+                            </tr>
+                            <tr>
+                                <td class="param-table-cell"><span>vConnectionType</span></td>
+                                <td class="param-table-cell"><span>Text</span></td>
+                                <td class="param-table-cell"><span>Type of the connection</span></td>
+                            </tr>
+                            <tr>
+                                <td class="param-table-cell"><span>vConfigUrl</span></td>
+                                <td class="param-table-cell"><span>Text</span></td>
+                                <td class="param-table-cell"><span>URL of the connection</span></td>
+                            </tr>
+                            <tr>
+                                <td class="param-table-cell"><span>vCredentialsName</span></td>
+                                <td class="param-table-cell"><span>Text</span></td>
+                                <td class="param-table-cell"><span>Name of the Credentials in CW</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div><span class="function">Select connection to Database</span></div>
+                    <div><span class="description">Selects the connection to the database by going over all the
+                            available
+                            connections.</span></div>
+                    <div><span class="property-title">Parameters</span></div>
+                    <div>
+                        <table class="param-table">
+                            <tr class="param-header-row">
+                                <th class="param-table-cell">Name</th>
+                                <th class="param-table-cell">Type</th>
+                                <th class="param-table-cell">Description</th>
+                            </tr>
+                            <tr>
+                                <td class="param-table-cell"><span>vConnectionName</span></td>
+                                <td class="param-table-cell"><span>Text</span></td>
+                                <td class="param-table-cell"><span>Name of the connection</span></td>
+                            </tr>
+                            <tr>
+                                <td class="param-table-cell"><span>vConnectionType</span></td>
+                                <td class="param-table-cell"><span>Text</span></td>
+                                <td class="param-table-cell"><span>Type of the connection</span></td>
+                            </tr>
+                            <tr>
+                                <td class="param-table-cell"><span>vConfigUrl</span></td>
+                                <td class="param-table-cell"><span>Text</span></td>
+                                <td class="param-table-cell"><span>URL of the connection</span></td>
+                            </tr>
+                            <tr>
+                                <td class="param-table-cell"><span>vCredentialsName</span></td>
+                                <td class="param-table-cell"><span>Text</span></td>
+                                <td class="param-table-cell"><span>Name of the Credentials in CW</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div><span class="function">DB Connection check</span></div>
+                    <div><span class="description">Verifies the connection if it is connected correctly or not, and Nisi
+                            aliqua mollit sint labore pariatur occaecat amet.</span></div>
 
-                <div><span class="function">This is a sample example.</span></div>
-                <div><span class="description">By mixing these the AADoc tags in meaningful sequence we can create an
-                        effective documentation</span></div>
+                    <div><span class="function">This is a sample example.</span></div>
+                    <div><span class="description">By mixing these the AADoc tags in meaningful sequence we can create
+                            an
+                            effective documentation</span></div>
+                </div>
             </div>
+
+            <div class="w3-container w3-content w3-padding-64 w3-card-4 w3-round-large"
+                style="max-width:800px; background-color: #333; color: #ddd;" id="notes">
+                <h2 class="w3-wide w3-center">Thank you</h2>
+                <p>Please feel free to let me know if you like to see some feature added or if you face any issues.</p>
+                <p>You can also open issues in <a href="https://github.com/dillir07/aadoc/">Github.</a></p>
+                <p><a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">Licensed under GPLv3, click
+                        here to learn more.</a></p>
+            </div>
+
+            <!-- End Page Content -->
         </div>
 
-        <div class="w3-container w3-content w3-padding-64 w3-card-4 w3-round-large" style="max-width:800px; background-color: #1c1e1f; color: #ddd;" id="notes">
-            <h2 class="w3-wide w3-center">Thank you</h2>
-            <p>Please feel free to let me know if you like to see some feature added or if you face any issues.</p>
-            <p>You can also open issues in <a href="https://github.com/dillir07/aadoc/">Github.</a></p>
-            <p><a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">Licensed under GPLv3, click here to learn more.</a></p>
-        </div>
+        <script>
+            // Used to toggle the menu on small screens when clicking on the menu button
+            function toggleView(element) {
 
-        <!-- End Page Content -->
-    </div>
 
-    <script>
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
+                if (element.href){
+                    if(element.href.includes("about")){
+                        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#2196f3");
+                    } else if(element.href.includes("documentation")){
+                        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#333");
+                    } else if(element.href.includes("example")){
+                        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#fff");
+                    }
+                }
+
+                var x = document.getElementById("navbar");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
             }
-        }
-    </script>
+        </script>
 
 </body>
 
