@@ -259,8 +259,8 @@
     }
 
     .light-cell {
-        background-color: #2195f356;
-        color: #333;
+        background-color: #2196f3;
+        color: #fff;
     }
 
     .dark-cell {
@@ -683,8 +683,7 @@
 
         </div>
         <br>
-        <div id="thankyou" class="w3-container w3-content w3-padding w3-card-4 w3-round-large light-cell"
-            style="max-width:100%;" id="notes">
+        <div id="thankyou" class="w3-container w3-content w3-padding w3-margin w3-card-4 w3-round-large light-cell" id="notes">
             <h2 class="w3-wide w3-center">Thank you</h2>
             <p>Please feel free to let me know if you like to see some feature added or if you face any issues.</p>
             <p>You can also open issues in <a href="https://github.com/dillir07/aadoc/">Github.</a></p>
@@ -704,9 +703,9 @@
             * Toggles theme
             */
             function toggleTheme() {
-                debugger;
+                
                 var targetTheme = document.getElementById('theme').innerText;
-                console.log('theme', targetTheme, 'dark?', targetTheme == lightTheme, "light?", targetTheme == darkTheme);
+    
                 if (targetTheme == darkTheme) {
                     var elements = document.querySelectorAll("." + lightThemeClassName);
                     elements.forEach((element) => {
