@@ -284,7 +284,8 @@
                 class="w3-bar-item w3-padding-large"><span id="doc"><span id="aa">AA</span>Doc</span></a>
             <a href="#about" class="w3-bar-item w3-padding-large w3-hide-small">About</a>
             <a href="#documentation" class="w3-bar-item w3-padding-large w3-hide-small">Documentation</a>
-            <a href="#example" class="w3-bar-item w3-padding-large w3-hide-small">Sample Documentation</a>
+            <a href="#example" class="w3-bar-item w3-padding-large w3-hide-small">Example</a>
+            <a href="#feedback" class="w3-bar-item w3-padding-large w3-hide-small">Feedback</a>
             <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-padding-large w3-button" title="More">Contact<i class="fa fa-caret-down"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -306,6 +307,7 @@
         <a href="#documentation" class="w3-bar-item w3-button w3-padding-large"
             onclick="toggleView(this)">Documentation</a>
         <a href="#example" class="w3-bar-item w3-button w3-padding-large" onclick="toggleView(this)">Example</a>
+        <a href="#feedback" class="w3-bar-item w3-button w3-padding-large" onclick="toggleView(this)">Feedback</a>
         <div class="w3-dropdown-hover">
             <button class="w3-padding-large w3-button" title="More">Contact<i class="fa fa-caret-down"></i></button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -317,6 +319,7 @@
                     style="background-color: rgb(0, 123, 181);">LinkedIn</a>
             </div>
         </div>
+        
     </div>
 
     <!-- Page content -->
@@ -683,7 +686,38 @@
 
         </div>
         <br>
-        <div id="thankyou" class="w3-container w3-content w3-padding w3-margin w3-card-4 w3-round-large light-cell" id="notes">
+
+        <div id="feedback" class="w3-container w3-content w3-padding-32 w3-margin w3-card-4 w3-round-large light-cell">
+            <iframe name="targetFrame" id="targetFrame" style="height: 0px;width: 0px; border: none; visibility: hidden;"></iframe>
+            <h2 class="w3-wide w3-center">Feedback</h2>
+            <div>
+                <form
+                    action="https://script.google.com/macros/s/AKfycbzNtRJVsHAnlkZmsH1ckLEwH5hZR2iWIqrZYXWgLHXhjeYQ7uE/exec"
+                    method="post" target="targetFrame" class="w3-form w3-padding">
+                    <input type="hidden" name="projectName" value="AADoc">
+                    <div>
+                        <label for="contactInfo">Contact Info : Email or Name - Optional</label><br>
+                        <input type="text" name="contactInfo" id="contactInfo" placeholder="dillir07@outlook.com"
+                            class="w3-input w3-round-medium">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comments">Comments or Suggestions</label> <br>
+                        <textarea name="comments" id="comments" cols="30" rows="5" required="required"
+                            placeholder="Say something..." class="w3-input w3-round-medium"></textarea>
+                    </div>
+                    <br>
+                    <div class="w3-center">
+                        <input type="submit" id="feedbackSumitBtn" value="Submit" class="w3-btn w3-white w3-round">
+                    </div>
+                </form><br>
+            </div>
+        </div>
+
+        <br>
+
+        <div id="thankyou" class="w3-container w3-content w3-padding w3-margin w3-card-4 w3-round-large light-cell"
+            id="notes">
             <h2 class="w3-wide w3-center">Thank you</h2>
             <p>Please feel free to let me know if you like to see some feature added or if you face any issues.</p>
             <p>You can also open issues in <a href="https://github.com/dillir07/aadoc/">Github.</a></p>
@@ -703,9 +737,9 @@
             * Toggles theme
             */
             function toggleTheme() {
-                
+
                 var targetTheme = document.getElementById('theme').innerText;
-    
+
                 if (targetTheme == darkTheme) {
                     var elements = document.querySelectorAll("." + lightThemeClassName);
                     elements.forEach((element) => {
@@ -722,8 +756,8 @@
                         element.classList.remove(darkThemeClassName);
                         element.classList.add(lightThemeClassName);
                     });
-                    document.body.style.backgroundColor = "#fff";
                     document.body.style.color = "#333";
+                    document.body.style.backgroundColor = "#fff";
                     document.getElementById('theme').innerText = darkTheme;
                 }
 
@@ -752,6 +786,10 @@
             }
 
             document.getElementById('theme').innerText = darkTheme;
+
+            document.forms[0].addEventListener("submit", function(){
+                document.getElementById("feedbackSumitBtn").disabled = true;
+            });
 
         </script>
 
