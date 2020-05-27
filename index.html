@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>AADoc</title>
+<!-- m  -->
 <meta charset="UTF-8">
 <meta name="author" content="Dilli Babu R">
 <meta name="description"
     content="AADoc is an easy to use tool that can generate Documentation automatically using Automation Anywhere code">
+<meta name="theme-color" content="#2196f3">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- gp -->
+<meta itemprop="name" content="AADoc">
+<meta itemprop="description"
+    content="AADoc is an easy to use tool that can generate Documentation automatically using Automation Anywhere code">
+<meta itemprop="image" content="https://dev-to-uploads.s3.amazonaws.com/i/3evjyabnoghtiojrchcy.PNG">
+
+<!-- t -->
+<meta name="twitter:card" content="AADoc">
+<meta name="twitter:title" content="AADoc">
+<meta name="twitter:description"
+    content="AADoc is an easy to use tool that can generate Documentation automatically using Automation Anywhere code">
+<meta name="twitter:creator" content="@dillir07">
+<meta name="twitter:image:src" content="https://dev-to-uploads.s3.amazonaws.com/i/3evjyabnoghtiojrchcy.PNG">
+
+<!-- og  -->
+<meta property="og:title" content="AADoc" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https:dillir07.github.io/aadoc" />
+<meta property="og:site_name" content="AADoc" />
 <meta property="og:image" content="https://dev-to-uploads.s3.amazonaws.com/i/3evjyabnoghtiojrchcy.PNG">
 <meta property="og:description"
     content="AADoc is an easy to use tool that can generate Documentation automatically using Automation Anywhere code">
-<meta name="theme-color" content="#2196f3">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="icon" href="https://dev-to-uploads.s3.amazonaws.com/i/3evjyabnoghtiojrchcy.PNG" type="image/x-icon">
 <style>
@@ -319,7 +341,7 @@
                     style="background-color: rgb(0, 123, 181);">LinkedIn</a>
             </div>
         </div>
-        
+
     </div>
 
     <!-- Page content -->
@@ -688,7 +710,8 @@
         <br>
 
         <div id="feedback" class="w3-container w3-content w3-padding-32 w3-margin w3-card-4 w3-round-large light-cell">
-            <iframe name="targetFrame" id="targetFrame" style="height: 0px;width: 0px; border: none; visibility: hidden;"></iframe>
+            <iframe name="targetFrame" id="targetFrame"
+                style="height: 0px;width: 0px; border: none; visibility: hidden;"></iframe>
             <h2 class="w3-wide w3-center">Feedback</h2>
             <div>
                 <form
@@ -702,7 +725,7 @@
                     </div>
                     <br>
                     <div>
-                        <label for="comments">Comments or Suggestions</label> <br>
+                        <label for="comments">Comments or Suggestions:</label> <br>
                         <textarea name="comments" id="comments" cols="30" rows="5" required="required"
                             placeholder="Say something..." class="w3-input w3-round-medium"></textarea>
                     </div>
@@ -787,7 +810,8 @@
 
             document.getElementById('theme').innerText = darkTheme;
 
-            document.forms[0].addEventListener("submit", function(){
+            document.forms[0].addEventListener("submit", function () {
+                document.getElementById("feedbackSumitBtn").value = "Thank you!";
                 document.getElementById("feedbackSumitBtn").disabled = true;
             });
 
